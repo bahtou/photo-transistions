@@ -1,33 +1,25 @@
 import { hot } from 'react-hot-loader/root';
 import React from 'react';
 
-import { Hx } from 'Elements';
-import Card from 'Components/Card';
+import firstImage from 'Images/city.jpg';
+import secondImage from 'Images/books.jpg';
+import thirdImage from 'Images/tree.jpg';
 
-
-const headerStyles = {
-  'gridColumn': 'center',
-  'gridRow': 'header',
-  'textAlign': 'center'
-};
+import {container, } from './styles.css';
 
 const bodyStyles = {
-  'gridColumn': 'center',
-  'gridRow': 'card',
-  'display': 'flex',
-  'flexFlow': 'column nowrap',
-  'alignItems': 'center'
+  margin: '0 auto'
 };
 
 const Root = () => {
   return (
     <>
-      <header style={headerStyles}>
-        <Hx type="h1" style={{ 'marginBottom': '0' }}>A minimalist React Applicaition</Hx>
-        <Hx type="h1" style={{ 'margin': '0' }}>w/ Webpack</Hx>
-      </header>
       <section style={bodyStyles}>
-        <Card />
+        <div id="container">
+          <img class="third" src={thirdImage} />
+          <img class="second" src={secondImage} />
+          <img class="first" src={firstImage} />
+        </div>
       </section>
     </>
   );
